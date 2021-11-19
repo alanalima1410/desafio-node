@@ -1,20 +1,20 @@
-const express = require("express");
-const router = express.Router();
+const {Router} = require("express");
+const router = Router();
 
-router.get("/", function(req, res){
+router.get("/", (req, res)=>{
     res.send("notas");
     
 });
-router.post("/", function (req, res){
+router.post("/",  (req, res)=>{
     console.log(req.body);
 
     res.send("post usuario")
 });
-router.put("/:id", function(req,res){
+router.put("/:id", (req,res)=>{
     res.send({});
 });
 
-router.delete("/:id", function (req, res) {
+router.delete("/:id", (req, res)=> {
     res.send({});
 });
 
